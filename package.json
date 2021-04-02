@@ -1,0 +1,24 @@
+{
+  "name": "marketplace",
+  "version": "1.0.0",
+  "description": "Final year project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basanttamang/fyp_marketplace.git"
+  },
+  "keywords": [
+    "marketplace",
+    "mernmarketplace",
+    "adlisting"
+  ],
+  "author": "Basant Tamang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basanttamang/fyp_marketplace/issues"
+  },
+  "homepage": "https://github.com/basanttamang/fyp_marketplace#readme"
+}
