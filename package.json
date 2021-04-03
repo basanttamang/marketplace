@@ -1,8 +1,8 @@
 {
-  "name": "amazona",
+  "name": "bigyapan",
   "type": "module",
   "version": "1.0.0",
-  "description": "Ecommerce website like amazon",
+  "description": "Marketplace web application",
   "main": "index.js",
   "scripts": {
     "build": "cd frontend && npm install && npm run build",
@@ -10,13 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/basanttamang/fyp_marketplace.git"
+    "url": "git+https://github.com/basanttamang/fyp.git"
   },
   "author": "Basant Tamang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/basanttamang/fyp_marketplace/issues"
+    "url": "https://github.com/basir/fyp/issues"
   },
+  "homepage": "https://github.com/basir/amazona#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
