@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/basanttamang/fyp.git"
+    "url": "git+https://github.com/basanttamang/fyp_marketplace.git"
   },
   "author": "Basant Tamang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/basir/fyp/issues"
+    "url": "https://github.com/basir/fyp_marketplace/issues"
   },
   "homepage": "https://github.com/basir/amazona#readme",
   "dependencies": {

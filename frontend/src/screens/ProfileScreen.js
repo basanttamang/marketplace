@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { detailsUser, updateUserProfile } from '../actions/userActions';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
-import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { detailsUser, updateUserProfile } from "../actions/userActions";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
+import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
 
 export default function ProfileScreen() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [sellerName, setSellerName] = useState('');
-  const [sellerLogo, setSellerLogo] = useState('');
-  const [sellerDescription, setSellerDescription] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [sellerName, setSellerName] = useState("");
+  // const [sellerLogo, setSellerLogo] = useState("");
+  // const [sellerDescription, setSellerDescription] = useState("");
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -34,8 +34,8 @@ export default function ProfileScreen() {
       setEmail(user.email);
       if (user.seller) {
         setSellerName(user.seller.name);
-        setSellerLogo(user.seller.logo);
-        setSellerDescription(user.seller.description);
+        // setSellerLogo(user.seller.logo);
+        // setSellerDescription(user.seller.description);
       }
     }
   }, [dispatch, userInfo._id, user]);
@@ -43,7 +43,7 @@ export default function ProfileScreen() {
     e.preventDefault();
     // dispatch update profile
     if (password !== confirmPassword) {
-      alert('Password and Confirm Password Are Not Matched');
+      alert("Password and Confirm Password Are Not Matched");
     } else {
       dispatch(
         updateUserProfile({
@@ -52,8 +52,8 @@ export default function ProfileScreen() {
           email,
           password,
           sellerName,
-          sellerLogo,
-          sellerDescription,
+          // sellerLogo,
+          // sellerDescription,
         })
       );
     }
@@ -130,7 +130,7 @@ export default function ProfileScreen() {
                     onChange={(e) => setSellerName(e.target.value)}
                   ></input>
                 </div>
-                <div>
+                {/* <div>
                   <label htmlFor="sellerLogo">Seller Logo</label>
                   <input
                     id="sellerLogo"
@@ -149,7 +149,7 @@ export default function ProfileScreen() {
                     value={sellerDescription}
                     onChange={(e) => setSellerDescription(e.target.value)}
                   ></input>
-                </div>
+                </div> */}
               </>
             )}
             <div>
