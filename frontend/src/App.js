@@ -73,12 +73,12 @@ function App() {
             ></Route>
           </div>
           <div>
-            <Link to="/cart">
+            {/* <Link to="/cart">
               Cart
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
-            </Link>
+            </Link> */}
             {userInfo ? (
               <div className="dropdown">
                 <Link to="#">
@@ -88,9 +88,24 @@ function App() {
                   <li>
                     <Link to="/profile">User Profile</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/orderhistory">Order History</Link>
-                  </li>
+                  </li> */}
+                  {userInfo && userInfo.isSeller && (
+                    <div className="dropdown">
+                      {/* <Link to="#admin">
+                        Seller <i className="fa fa-caret-down"></i>
+                      </Link> */}
+                      {/* <ul className="dropdown-content"> */}
+                      <li>
+                        <Link to="/productlist/seller">Products</Link>
+                      </li>
+                      {/* <li>
+                    <Link to="/orderlist/seller">Orders</Link>
+                  </li> */}
+                      {/* </ul> */}
+                    </div>
+                  )}
                   <li>
                     <Link to="#signout" onClick={signoutHandler}>
                       Sign Out
@@ -100,21 +115,6 @@ function App() {
               </div>
             ) : (
               <Link to="/signin">Sign In</Link>
-            )}
-            {userInfo && userInfo.isSeller && (
-              <div className="dropdown">
-                <Link to="#admin">
-                  Seller <i className="fa fa-caret-down"></i>
-                </Link>
-                <ul className="dropdown-content">
-                  <li>
-                    <Link to="/productlist/seller">Products</Link>
-                  </li>
-                  <li>
-                    <Link to="/orderlist/seller">Orders</Link>
-                  </li>
-                </ul>
-              </div>
             )}
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
@@ -128,9 +128,9 @@ function App() {
                   <li>
                     <Link to="/productlist">Products</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/orderlist">Orders</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="/userlist">Users</Link>
                   </li>
@@ -248,3 +248,19 @@ function App() {
 }
 
 export default App;
+
+// {userInfo && userInfo.isSeller && (
+//   <div className="dropdown">
+//     <Link to="#admin">
+//       Seller <i className="fa fa-caret-down"></i>
+//     </Link>
+//     <ul className="dropdown-content">
+//       <li>
+//         <Link to="/productlist/seller">Products</Link>
+//       </li>
+//       {/* <li>
+//         <Link to="/orderlist/seller">Orders</Link>
+//       </li> */}
+//     </ul>
+//   </div>
+// )}
