@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { listProducts } from '../actions/productActions';
-import { detailsUser } from '../actions/userActions';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
-import Product from '../components/Product';
-import Rating from '../components/Rating';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { listProducts } from "../actions/productActions";
+import { detailsUser } from "../actions/userActions";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
+import Product from "../components/Product";
+import Rating from "../components/Rating";
 
 export default function SellerScreen(props) {
   const sellerId = props.match.params.id;
@@ -35,13 +35,13 @@ export default function SellerScreen(props) {
           <ul className="card card-body">
             <li>
               <div className="row start">
-                <div className="p-1">
+                {/* <div className="p-1">
                   <img
                     className="small"
                     src={user.seller.logo}
                     alt={user.seller.name}
                   ></img>
-                </div>
+                </div> */}
                 <div className="p-1">
                   <h1>{user.seller.name}</h1>
                 </div>

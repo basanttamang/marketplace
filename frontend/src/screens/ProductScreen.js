@@ -57,14 +57,8 @@ export default function ProductScreen(props) {
       ) : (
         <div>
           <Link to="/">Back to result</Link>
-          <div className="row top">
-            <div className="col-2">
-              <img
-                className="large"
-                src={product.image}
-                alt={product.name}
-              ></img>
-            </div>
+          <div className="product-row">
+            <img className="large" src={product.image} alt={product.name}></img>
             <div className="col-1">
               <ul>
                 <li>
@@ -94,10 +88,7 @@ export default function ProductScreen(props) {
                         {product.seller.seller.name}
                       </Link>
                     </h2>
-                    <Rating
-                      rating={product.seller.seller.rating}
-                      numReviews={product.seller.seller.numReviews}
-                    ></Rating>
+                    <h2>9818163073</h2>
                   </li>
                   {/* <li>
                     <div className="row">

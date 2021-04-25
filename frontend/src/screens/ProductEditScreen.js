@@ -99,27 +99,29 @@ export default function ProductEditScreen(props) {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-            <div>
-              <label htmlFor="name">Name</label>
-              <input
-                id="name"
-                type="text"
-                placeholder="Enter name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              ></input>
-            </div>
-            <div>
-              <label htmlFor="price">Price</label>
-              <input
-                id="price"
-                type="text"
-                placeholder="Enter price"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-              ></input>
-            </div>
-            {/* <div>
+            <div className="product-form">
+              <div className="product-desc-2">
+                <div className="product-items-desc">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Enter name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  ></input>
+                </div>
+                <div className="product-items-desc">
+                  <label htmlFor="price">Price</label>
+                  <input
+                    id="price"
+                    type="text"
+                    placeholder="Enter price"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                  ></input>
+                </div>
+                {/* <div>
               <label htmlFor="image">Image</label>
               <input
                 id="image"
@@ -129,40 +131,42 @@ export default function ProductEditScreen(props) {
                 onChange={(e) => setImage(e.target.value)}
               ></input>
             </div> */}
-            <div>
-              <label htmlFor="imageFile">Image File</label>
-              <input
-                type="file"
-                id="imageFile"
-                label="Choose Image"
-                onChange={uploadFileHandler}
-              ></input>
-              {loadingUpload && <LoadingBox></LoadingBox>}
-              {errorUpload && (
-                <MessageBox variant="danger">{errorUpload}</MessageBox>
-              )}
-            </div>
-            <div>
-              <label htmlFor="category">Category</label>
-              <input
-                id="category"
-                type="text"
-                placeholder="Enter category"
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              ></input>
-            </div>
-            <div>
-              <label htmlFor="brand">Location</label>
-              <input
-                id="brand"
-                type="text"
-                placeholder="Enter Location"
-                value={brand}
-                onChange={(e) => setBrand(e.target.value)}
-              ></input>
-            </div>
-            {/* <div>
+                <div className="product-items-desc">
+                  <label htmlFor="imageFile">Image File</label>
+                  <input
+                    type="file"
+                    id="imageFile"
+                    label="Choose Image"
+                    onChange={uploadFileHandler}
+                  ></input>
+                  {loadingUpload && <LoadingBox></LoadingBox>}
+                  {errorUpload && (
+                    <MessageBox variant="danger">{errorUpload}</MessageBox>
+                  )}
+                </div>
+              </div>
+              <div className="product-desc-2">
+                <div className="product-items-desc">
+                  <label htmlFor="category">Category</label>
+                  <input
+                    id="category"
+                    type="text"
+                    placeholder="Enter category"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                  ></input>
+                </div>
+                <div className="product-items-desc">
+                  <label htmlFor="brand">Location</label>
+                  <input
+                    id="brand"
+                    type="text"
+                    placeholder="Enter Location"
+                    value={brand}
+                    onChange={(e) => setBrand(e.target.value)}
+                  ></input>
+                </div>
+                {/* <div>
               <label htmlFor="countInStock">Count In Stock</label>
               <input
                 id="countInStock"
@@ -172,19 +176,23 @@ export default function ProductEditScreen(props) {
                 onChange={(e) => setCountInStock(e.target.value)}
               ></input>
             </div> */}
-            <div>
-              <label htmlFor="description">Description</label>
-              <textarea
-                id="description"
-                rows="3"
-                type="text"
-                placeholder="Enter description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              ></textarea>
+                <div className="product-items-desc">
+                  <label htmlFor="description">Description</label>
+                  <textarea
+                    id="description"
+                    rows="3"
+                    type="text"
+                    placeholder="Enter description"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                  ></textarea>
+                </div>
+              </div>
             </div>
+
             <div>
               <label></label>
+              {}
               <button className="primary" type="submit">
                 Update
               </button>

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import Product from "../components/Product";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
@@ -27,6 +26,12 @@ export default function HomeScreen() {
   }, [dispatch]);
   return (
     <div>
+      <div className="home-banner">
+        <div className="home-banner-content">
+          <h1>NEPAL'S LARGEST ONLINE MARKETPLACE</h1>
+          <h2>You can buy and seller your product</h2>
+        </div>
+      </div>
       {/* <h2>Top Sellers</h2>
       {loadingSellers ? (
         <LoadingBox></LoadingBox>

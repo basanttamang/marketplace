@@ -60,10 +60,11 @@ export default function ProfileScreen() {
   };
   return (
     <div>
+      <div className="product-form"></div>
+      <div className="product-desc-1"></div>
+      <div className="product-desc-1"></div>
+
       <form className="form" onSubmit={submitHandler}>
-        <div>
-          <h1>User Profile</h1>
-        </div>
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
@@ -79,58 +80,66 @@ export default function ProfileScreen() {
                 Profile Updated Successfully
               </MessageBox>
             )}
-            <div>
-              <label htmlFor="name">Name</label>
-              <input
-                id="name"
-                type="text"
-                placeholder="Enter name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              ></input>
-            </div>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              ></input>
-            </div>
-            <div>
-              <label htmlFor="password">Password</label>
-              <input
-                id="password"
-                type="password"
-                placeholder="Enter password"
-                onChange={(e) => setPassword(e.target.value)}
-              ></input>
-            </div>
-            <div>
-              <label htmlFor="confirmPassword">confirm Password</label>
-              <input
-                id="confirmPassword"
-                type="password"
-                placeholder="Enter confirm password"
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              ></input>
-            </div>
-            {user.isSeller && (
-              <>
-                <h2>Seller</h2>
+            <div className="product-form">
+              <div className="product-desc-1">
                 <div>
-                  <label htmlFor="sellerName">Seller Name</label>
+                  <h1>User Profile</h1>
+                </div>
+                <div className="product-items-desc">
+                  <label htmlFor="name">Name</label>
                   <input
-                    id="sellerName"
+                    id="name"
                     type="text"
-                    placeholder="Enter Seller Name"
-                    value={sellerName}
-                    onChange={(e) => setSellerName(e.target.value)}
+                    placeholder="Enter name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   ></input>
                 </div>
-                {/* <div>
+                <div className="product-items-desc">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  ></input>
+                </div>
+                <div className="product-items-desc">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></input>
+                </div>
+                <div className="product-items-desc">
+                  <label htmlFor="confirmPassword">Confirm Password</label>
+                  <input
+                    id="confirmPassword"
+                    type="password"
+                    placeholder="Enter confirm password"
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                  ></input>
+                </div>
+              </div>
+              <div className="product-desc-1">
+                {" "}
+                {user.isSeller && (
+                  <>
+                    <h2>Seller</h2>
+                    <div className="product-items-desc">
+                      <label htmlFor="sellerName">Seller Name</label>
+                      <input
+                        id="sellerName"
+                        type="text"
+                        placeholder="Enter Seller Name"
+                        value={sellerName}
+                        onChange={(e) => setSellerName(e.target.value)}
+                      ></input>
+                    </div>
+                    {/* <div>
                   <label htmlFor="sellerLogo">Seller Logo</label>
                   <input
                     id="sellerLogo"
@@ -150,8 +159,11 @@ export default function ProfileScreen() {
                     onChange={(e) => setSellerDescription(e.target.value)}
                   ></input>
                 </div> */}
-              </>
-            )}
+                  </>
+                )}
+              </div>
+            </div>
+
             <div>
               <label />
               <button className="primary" type="submit">
