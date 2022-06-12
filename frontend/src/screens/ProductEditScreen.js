@@ -121,16 +121,6 @@ export default function ProductEditScreen(props) {
                     onChange={(e) => setPrice(e.target.value)}
                   ></input>
                 </div>
-                {/* <div>
-              <label htmlFor="image">Image</label>
-              <input
-                id="image"
-                type="text"
-                placeholder="Enter image"
-                value={image}
-                onChange={(e) => setImage(e.target.value)}
-              ></input>
-            </div> */}
                 <div className="product-items-desc">
                   <label htmlFor="imageFile">Image File</label>
                   <input
@@ -166,16 +156,6 @@ export default function ProductEditScreen(props) {
                     onChange={(e) => setBrand(e.target.value)}
                   ></input>
                 </div>
-                {/* <div>
-              <label htmlFor="countInStock">Count In Stock</label>
-              <input
-                id="countInStock"
-                type="text"
-                placeholder="Enter countInStock"
-                value={countInStock}
-                onChange={(e) => setCountInStock(e.target.value)}
-              ></input>
-            </div> */}
                 <div className="product-items-desc">
                   <label htmlFor="description">Description</label>
                   <textarea
